@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26133f">
+  <meta name="description" content="SheShield is a safety technology concept and interactive demo for a future connected safety ring.">
+  <title>SheShield — Your safety, in your hands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" data-page="home" aria-label="SheShield home">
+        <span class="brand-mark"><span></span><i></i></span>
+        <span class="brand-copy"><strong>SheShield</strong><small>SAFETY, IN YOUR HANDS</small></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#dashboard" data-page="dashboard"><span class="nav-icon">⌂</span>Overview</a>
+        <a href="#history" data-page="history"><span class="nav-icon">◷</span>Alert history</a>
+        <a href="#contacts" data-page="contacts"><span class="nav-icon">♡</span>Trusted contacts</a>
+        <a href="#device" data-page="device"><span class="nav-icon">◉</span>My device</a>
+        <a href="#how-it-works" data-page="how-it-works"><span class="nav-icon">✳</span>How it works</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-mini"><span class="privacy-lock">⌑</span><div><strong>Your privacy matters</strong><p>Your demo data stays on this device.</p></div></div>
+        <button class="profile-button" id="profileButton">
+          <span class="avatar" id="avatarInitials">G</span>
+          <span class="profile-copy"><strong id="profileName">Guest User</strong><small id="profileKind">Local demo profile</small></span>
+          <span class="profile-dots">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>SheShield</span><b>/</b><strong id="pageLabel">Overview</strong></div>
+        <div class="topbar-actions"><span class="demo-pill" id="backendStatus"><i></i> LOCAL DEMO</span><button class="icon-button" id="helpButton" aria-label="About this demo">?</button></div>
+      </header>
+
+      <div class="page-container">
+        <section class="page-view" id="page-home">
+          <div class="landing-nav">
+            <a class="brand" href="#home"><span class="brand-mark"><span></span><i></i></span><span class="brand-copy"><strong>SheShield</strong><small>SAFETY, IN YOUR HANDS</small></span></a>
+            <button class="button button-outline" data-page="login">Sign in</button>
+          </div>
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="eyebrow"><span class="eyebrow-dot"></span> A SAFER WAY FORWARD</span>
+              <h1>Confidence to go.<br><em>Safety to return.</em></h1>
+              <p class="hero-tagline">One Ring. One Touch. A Stronger Shield.</p>
+              <p class="hero-lead">Meet the next idea in personal safety: a discreet smart ring concept, designed to turn one small gesture into a stronger circle of support.</p>
+              <div class="hero-actions"><button class="button button-primary" data-page="login">Explore the demo <span>→</span></button><button class="text-button" data-page="how-it-works"><span class="play-icon">▶</span> See how it works</button></div>
+              <div class="hero-note"><span class="check-mark">✓</span> A website prototype — no ring or emergency service is connected</div>
+            </div>
+            <div class="hero-art">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="hero-glow"></div>
+              <img src="assets/ring.svg" alt="Illustration of the SheShield smart safety ring">
+              <div class="float-card float-card-top"><span class="float-icon">⌁</span><span><b>One touch</b><small>starts a safety flow</small></span></div>
+              <div class="float-card float-card-bottom"><span class="signal-icon">⌁</span><span><b>Designed for resilience</b><small>Cellular · Satellite · Offline</small></span></div>
+              <div class="hero-caption">A CONCEPT BUILT AROUND YOU</div>
+            </div>
+          </div>
+          <div class="landing-stats"><div><strong>01</strong><span>simple gesture</span></div><i></i><div><strong>03</strong><span>communication paths</span></div><i></i><div><strong>∞</strong><span>more peace of mind</span></div></div>
+          <div class="section-heading landing-section-heading"><span class="eyebrow">THE IDEA</span><h2>Safety shouldn't depend on a signal.</h2><p>In a busy city or on a quiet road, getting help should feel simple. SheShield explores a future where a discreet wearable and thoughtful technology work together to make that possible.</p></div>
+          <div class="mode-cards">
+            <article class="mode-card"><span class="mode-symbol cellular">⌁</span><span class="mode-label">01 / CONNECTED</span><h3>Cellular first</h3><p>A future ring could send a distress event through a compatible cellular network to a secure service.</p></article>
+            <article class="mode-card"><span class="mode-symbol satellite">✧</span><span class="mode-label">02 / BEYOND COVERAGE</span><h3>Satellite ready</h3><p>A future version may use an authorised satellite service where compatible hardware and coverage allow.</p></article>
+            <article class="mode-card"><span class="mode-symbol offline">◷</span><span class="mode-label">03 / OFFLINE-CAPABLE</span><h3>Save, then send</h3><p>If a connection isn't available, a future device could hold an event securely and retry when connectivity returns.</p></article>
+          </div>
+          <div class="landing-cta"><div><span class="eyebrow">A PROTOTYPE WITH A PURPOSE</span><h2>See the whole safety flow.</h2><p>Explore a hands-on demo of the dashboard, alerts, location permission, and trusted contacts.</p></div><button class="button button-white" data-page="login">Get started <span>→</span></button></div>
+          <footer class="landing-footer"><span>© 2026 SheShield concept</span><span>Made for a safer tomorrow, with privacy in mind.</span><button data-page="how-it-works">How it works</button></footer>
+        </section>
+
+        <section class="page-view hidden" id="page-login">
+          <div class="auth-wrap">
+            <div class="auth-art"><span class="eyebrow">WELCOME TO SHESHIELD</span><h2>A little more<br>peace of mind.</h2><p id="authInfoCopy">Your account uses Supabase Auth. No ring or emergency service is connected.</p><div class="auth-art-ring"><img src="assets/ring.svg" alt=""></div><div class="auth-demo-note" id="authDemoLabel">SERVER ACCOUNT · NO REAL ALERTS ARE SENT</div></div>
+            <div class="auth-form-panel">
+              <div class="auth-tabs"><button class="auth-tab active" data-auth-tab="register">Create account</button><button class="auth-tab" data-auth-tab="login">Sign in</button></div>
+              <h1 id="authHeading">Create your demo account</h1><p class="muted" id="authSubheading">A few details to personalise your experience.</p>
+              <form id="authForm" novalidate>
+                <label class="form-field"><span>Full name</span><input id="authName" type="text" autocomplete="name" placeholder="e.g. Maya Sharma" maxlength="70"></label>
+                <label class="form-field"><span>Email address</span><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" maxlength="120"></label>
+                <label class="form-field"><span>Phone number</span><input id="authPhone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" maxlength="20"></label>
+                <label class="form-field"><span>Password <small>(demo only; never saved)</small></span><input id="authPassword" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8"></label>
+                <p class="form-error" id="authError" role="alert"></p>
+                <button class="button button-primary auth-submit" type="submit" id="authSubmit">Create demo account <span>→</span></button>
+              </form>
+              <p class="auth-privacy" id="authPrivacyCopy">⌑ &nbsp; Supabase Auth manages your password; session tokens are kept in HttpOnly cookies.</p>
+              <button class="back-link" data-page="home">← Back to SheShield</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-view hidden" id="page-dashboard">
+          <div class="page-title-row"><div><span class="eyebrow">YOUR SAFETY SPACE</span><h1>Good <span id="greetingTime">day</span>, <em id="welcomeName">there</em></h1><p class="muted">A clear view of your SheShield demo, all in one place.</p></div><span class="date-chip" id="todayDate"></span></div>
+          <div class="notice-banner"><span class="notice-mark">i</span><span id="noticeCopy"><strong>Prototype mode:</strong> The ring, network delivery, and contact notifications are simulated. This dashboard does not contact emergency services.</span><button id="noticeDismiss" aria-label="Dismiss notice">×</button></div>
+          <div class="dashboard-grid">
+            <article class="card status-card">
+              <div class="card-heading"><div><span class="eyebrow">DEVICE STATUS</span><h2>Your SheShield ring</h2></div><span class="status-tag status-neutral"><i></i> Not connected</span></div>
+              <div class="device-summary"><div class="mini-ring"><img src="assets/ring.svg" alt=""></div><div><strong>Hardware not connected</strong><p>You're exploring in demo mode</p></div><button class="arrow-button" data-page="device" aria-label="Open device details">→</button></div>
+              <div class="card-divider"></div>
+              <div class="summary-pair"><span>Battery <b>84% demo</b></span><span>Connection <b>None</b></span></div>
+            </article>
+            <article class="card mode-status-card">
+              <div class="card-heading"><div><span class="eyebrow">COMMUNICATION</span><h2>Demo network</h2></div><span class="live-dot">● Available</span></div>
+              <p class="muted small">Choose which route the demo uses for new alerts.</p>
+              <div class="mode-switcher" role="group" aria-label="Select demo communication mode">
+                <button class="mode-option active" data-mode="cellular"><span>⌁</span>Cellular</button>
+                <button class="mode-option" data-mode="satellite"><span>✧</span>Satellite</button>
+                <button class="mode-option" data-mode="offline"><span>◷</span>Offline</button>
+              </div>
+              <div class="mode-explainer" id="modeExplainer">Simulated cellular route · no network transmission occurs.</div>
+            </article>
+            <article class="card sos-card">
+              <div class="sos-copy"><span class="eyebrow">NEED HELP?</span><h2>Your safety comes first.</h2><p>Press only to explore a simulated emergency alert flow.</p>              <div class="sos-disclaimer">No alert is sent to emergency services or contacts.</div><button class="reset-alert-button" id="resetAlertButton">Cancel / reset latest demo alert</button></div>
+              <button class="sos-button" id="sosButton"><span class="sos-ripple"></span><strong>SOS</strong><small>DEMO ALERT</small></button>
+            </article>
+            <article class="card location-card">
+              <div class="card-heading"><div><span class="eyebrow">LOCATION</span><h2>Your location</h2></div><span class="location-badge" id="locationBadge">Not shared</span></div>
+              <div class="location-content"><div id="map" aria-label="Map showing your location"></div><div class="location-details"><span class="location-pin">⌖</span><div><strong id="locationTitle">Location not available</strong><p id="locationCoords">Choose to share your browser location.</p><span class="source-tag" id="locationSource">No location</span></div></div></div>
+              <div class="location-actions"><button class="button button-soft location-action" id="getLocationButton">Share my location <span>→</span></button><button class="demo-location-button" id="demoLocationButton">Preview demo location</button></div>
+            </article>
+            <article class="card quick-stats">
+              <span class="eyebrow">YOUR OVERVIEW</span>
+              <div class="quick-stat-list">
+                <div><span class="quick-stat-icon pink">♡</span><span><strong id="contactCount">0</strong><small>Trusted contacts</small></span><button data-page="contacts" aria-label="Manage contacts">→</button></div>
+                <div><span class="quick-stat-icon purple">◷</span><span><strong id="alertCount">0</strong><small>Demo alerts created</small></span><button data-page="history" aria-label="View alert history">→</button></div>
+                <div><span class="quick-stat-icon peach">⌁</span><span><strong>Not connected</strong><small>Ring hardware</small></span><button data-page="device" aria-label="View device">→</button></div>
+              </div>
+            </article>
+            <article class="card activity-card">
+              <div class="card-heading"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>Latest demo alerts</h2></div><button class="text-link" data-page="history">View all →</button></div>
+              <div id="recentActivity" class="recent-activity"></div>
+            </article>
+          </div>
+          <p class="safety-footnote">SheShield is a concept prototype, not an emergency service. If you are in immediate danger, contact your local emergency number directly.</p>
+        </section>
+
+        <section class="page-view hidden" id="page-contacts">
+          <div class="page-title-row"><div><span class="eyebrow">YOUR SUPPORT CIRCLE</span><h1>Trusted contacts</h1><p class="muted">Keep important people close. This prototype does not notify them.</p></div><span class="count-chip"><b id="contactsTotal">0</b> contacts</span></div>
+          <div class="notice-banner notice-soft"><span class="notice-mark">i</span><span id="contactsNoticeCopy">Contact details are saved in Supabase for your account. No messages or calls are sent.</span></div>
+          <div class="contacts-layout">
+            <article class="card contact-form-card"><span class="eyebrow">ADD TO YOUR CIRCLE</span><h2>Someone you trust</h2><p class="muted">Add up to 10 people you would want in your support circle.</p>
+              <form id="contactForm" novalidate>
+                <label class="form-field"><span>Contact name</span><input id="contactName" type="text" placeholder="e.g. Aanya Sharma" maxlength="70" required></label>
+                <label class="form-field"><span>Phone number</span><input id="contactPhone" type="tel" placeholder="+91 98765 43210" maxlength="20" required></label>
+                <p class="form-error" id="contactError" role="alert"></p>
+                <button class="button button-primary" type="submit">＋ &nbsp; Add trusted contact</button>
+              </form>
+            </article>
+            <div class="contacts-list-wrap"><div class="list-heading"><div><span class="eyebrow">YOUR PEOPLE</span><h2>Safety circle</h2></div></div><div id="contactsList" class="contacts-list"></div></div>
+          </div>
+        </section>
+
+        <section class="page-view hidden" id="page-history">
+          <div class="page-title-row"><div><span class="eyebrow">A RECORD OF YOUR DEMO</span><h1>Alert history</h1><p class="muted" id="historyIntro">See the simulated alert events saved to your Supabase account.</p></div><button class="button button-outline danger-outline" id="clearHistoryButton">Clear history</button></div>
+          <div class="notice-banner notice-soft"><span class="notice-mark">i</span><span>These are prototype records only. Alerts were not sent to contacts, emergency responders, or a real network.</span></div>
+          <div class="card history-card"><div class="history-toolbar"><div class="filter-pills" role="group" aria-label="Filter alerts by communication mode"><button class="filter-pill active" data-filter="all">All events</button><button class="filter-pill" data-filter="cellular">Cellular</button><button class="filter-pill" data-filter="satellite">Satellite</button><button class="filter-pill" data-filter="offline">Offline</button></div><span id="historyResultCount" class="muted small"></span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Alert</th><th>Date & time</th><th>Location</th><th>Route</th><th>Status</th></tr></thead><tbody id="historyRows"></tbody></table></div><div id="historyEmpty" class="empty-state hidden"><span>◷</span><h3>No alerts to show</h3><p>Your demo alert history will appear here.</p><button class="button button-soft" data-page="dashboard">Go to overview</button></div></div>
+        </section>
+
+        <section class="page-view hidden" id="page-device">
+          <div class="page-title-row"><div><span class="eyebrow">THE FUTURE OF PERSONAL SAFETY</span><h1>Your SheShield device</h1><p class="muted">A look at the smart ring concept behind the experience.</p></div><span class="status-tag status-neutral"><i></i> Demo only</span></div>
+          <div class="device-page-grid">
+            <article class="card device-hero-card"><div class="device-large-art"><div class="device-art-glow"></div><img src="assets/ring.svg" alt="Concept illustration of a SheShield safety ring"><span class="art-caption">CONCEPT RENDER · NOT A REAL DEVICE</span></div><div class="device-hero-copy"><span class="eyebrow">SHESHIELD SMART RING</span><h2>Small enough to wear.<br><em>Designed to matter.</em></h2><p>A future safety ring could pair an unobtrusive form with a discreet SOS gesture. The device shown here is a visual concept only; no physical ring is connected to this website.</p><div class="device-metrics"><div><small>CONNECTION</small><b><i class="status-dot gray"></i> Not connected</b></div><div><small>SIMULATED BATTERY</small><b>84% <span>demo value only</span></b></div></div></div></article>
+            <article class="card architecture-card"><span class="eyebrow">BUILT FOR A FUTURE INTEGRATION</span><h2>From ring to response</h2><p class="muted">A production implementation would need validated hardware, secure services, and explicit consent.</p>
+              <div class="architecture-list"><div><span>01</span><div><strong>Wearable firmware</strong><p>Detects a deliberate SOS gesture and prepares a signed event.</p></div><i>⌁</i></div><div><span>02</span><div><strong>Connectivity layer</strong><p>Routes over supported cellular, authorised satellite, or a safe local queue.</p></div><i>⌁</i></div><div><span>03</span><div><strong>Secure backend API</strong><p>Authenticates the device, validates, timestamps, and stores the event.</p></div><i>⌁</i></div><div><span>04</span><div><strong>SheShield dashboard</strong><p>Displays event status to an authenticated user and permitted contacts.</p></div><i>✓</i></div></div>
+              <div class="api-note"><strong>Integration boundary</strong><code>POST /api/v1/device-events/sos</code><span>Future interface proposal · not implemented</span></div>
+            </article>
+          </div>
+          <div class="device-warning"><span>!</span><p><strong>Important:</strong> There is no hardware, cellular connection, satellite service, or backend connected to this prototype. Battery and device status are not measured.</p></div>
+        </section>
+
+        <section class="page-view hidden" id="page-how-it-works">
+          <div class="page-title-row"><div><span class="eyebrow">THE CONCEPT</span><h1>One gesture. A considered response.</h1><p class="muted">A future system designed to make the journey from SOS to support more resilient.</p></div></div>
+          <div class="architecture-flow card">
+            <div class="flow-step"><span class="flow-number">01</span><div class="flow-icon">◉</div><h3>Smart safety ring</h3><p>A wearable is paired securely to its owner.</p></div><div class="flow-connector">↓</div>
+            <div class="flow-step"><span class="flow-number">02</span><div class="flow-icon">⌁</div><h3>SOS button pressed</h3><p>A deliberate gesture prepares a safety event.</p></div><div class="flow-connector">↓</div>
+            <div class="flow-step"><span class="flow-number">03</span><div class="flow-icon">⌕</div><h3>Check connectivity</h3><p>The device looks for a supported route.</p></div><div class="flow-connector">↓</div>
+            <div class="flow-routes"><div class="flow-route cellular-route"><span>⌁</span><div><b>Cellular</b><small>Compatible network</small></div></div><div class="flow-route satellite-route"><span>✧</span><div><b>Satellite</b><small>Compatible service</small></div></div><div class="flow-route offline-route"><span>◷</span><div><b>Offline</b><small>Store and retry</small></div></div></div><div class="flow-connector">↓</div>
+            <div class="flow-step"><span class="flow-number">04</span><div class="flow-icon">⌘</div><h3>Secure cloud backend</h3><p>Receives and validates demo events for the signed-in account.</p></div><div class="flow-connector">↓</div>
+            <div class="flow-step final-flow-step"><span class="flow-number">05</span><div class="flow-icon">⌂</div><h3>SheShield dashboard</h3><p>Shows status to the authenticated user.</p></div>
+          </div>
+          <div class="how-bottom-grid"><article class="card"><span class="eyebrow">WHAT THIS DEMO DOES</span><h2>Explore the experience</h2><ul class="check-list"><li>Simulates alert creation and delivery statuses.</li><li>Saves trusted contacts and demo alerts through the Supabase-backed API.</li><li>Requests your permission before using browser location.</li><li>Updates queued demo events through the backend when a demo route is selected.</li></ul></article><article class="card"><span class="eyebrow">WHAT A REAL SYSTEM NEEDS</span><h2>From concept to connected</h2><ul class="check-list future-list"><li>Tested, certified wearable hardware and firmware.</li><li>Secure backend, device identity, and encrypted transport.</li><li>Authorised cellular / satellite providers and coverage.</li><li>Privacy, consent, safety testing, and operational support.</li></ul></article></div>
+          <div class="disclaimer-box"><span>♡</span><p><strong>Safety note:</strong> SheShield is a hackathon concept and is not a replacement for emergency services. This website cannot dispatch help or notify anyone. In an emergency, contact your local emergency number directly.</p></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <div class="modal-backdrop hidden" id="sosModal" role="dialog" aria-modal="true" aria-labelledby="sosModalTitle">
+    <div class="modal-card sos-modal"><button class="modal-close" data-close-modal aria-label="Close">×</button><div class="modal-icon danger-icon">!</div><span class="eyebrow">DEMO ALERT ONLY</span><h2 id="sosModalTitle">Start a simulated SOS?</h2><p>This will save a demo event to your Supabase account. It will <strong>not</strong> contact emergency services or your trusted contacts.</p><div class="sos-location-panel" aria-live="polite"><span class="sos-location-icon">⌖</span><div><strong id="sosLocationStatus">Requesting browser location…</strong><p id="sosLocationDetails">Your browser may ask you to allow location access.</p><a id="sosMapsLink" class="sos-maps-link hidden" href="#" target="_blank" rel="noopener noreferrer">View location in Google Maps ↗</a></div></div><div class="modal-actions"><button class="button button-outline" data-close-modal>Not now</button><button class="button button-danger" id="confirmSosButton" disabled>Create demo alert</button></div></div>
+  </div>
+  <div class="modal-backdrop hidden" id="alertResultModal" role="dialog" aria-modal="true" aria-labelledby="alertResultTitle">
+    <div class="modal-card result-modal"><button class="modal-close" data-close-modal aria-label="Close">×</button><div class="result-check" id="resultIcon">✓</div><span class="eyebrow">SIMULATED ALERT EVENT</span><h2 id="alertResultTitle">Demo alert created</h2><p id="alertResultText"></p><div class="alert-id-box"><small>DEMO ALERT ID</small><strong id="alertResultId"></strong></div><div class="result-meta"><span>Route <b id="alertResultMode"></b></span><span>Status <b id="alertResultStatus"></b></span></div><button class="button button-primary full-button" data-close-modal>Done</button></div>
+  </div>
+  <div class="modal-backdrop hidden" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="modal-card"><button class="modal-close" data-close-modal aria-label="Close">×</button><span class="eyebrow">ABOUT THIS EXPERIENCE</span><h2 id="aboutTitle">A prototype, not a lifeline.</h2><p>SheShield demonstrates a possible wearable safety experience. No physical ring, emergency service, communications provider, or alert backend is connected. Use the site only as a demo.</p><button class="button button-primary full-button" data-close-modal>Understood</button></div>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

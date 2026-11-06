@@ -1,0 +1,23 @@
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Installed dependencies
+node_modules/
+**/node_modules/
+
+# Local databases and database sidecar files
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Private keys and certificate bundles
+*.pem
+*.key
+*.p12
+*.pfx

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="120" y1="50" x2="351" y2="304" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF1C7"/><stop offset=".23" stop-color="#D8B473"/><stop offset=".48" stop-color="#FFF0C6"/><stop offset=".75" stop-color="#A98142"/><stop offset="1" stop-color="#E9CA8B"/></linearGradient>
+    <linearGradient id="inner" x1="134" y1="74" x2="346" y2="281" gradientUnits="userSpaceOnUse"><stop stop-color="#A06AD8"/><stop offset=".55" stop-color="#EBA6BE"/><stop offset="1" stop-color="#693AA7"/></linearGradient>
+    <radialGradient id="gem" cx="0" cy="0" r="1" gradientTransform="matrix(36 57 -48 30 226 70)" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF"/><stop offset=".33" stop-color="#ECC8F3"/><stop offset="1" stop-color="#A36DC7"/></radialGradient>
+    <filter id="shadow" x="48" y="23" width="386" height="337" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <ellipse cx="244" cy="291" fill="#20102E" opacity=".18" rx="157" ry="25" filter="url(#shadow)"/>
+  <g transform="rotate(-16 237 183)">
+    <ellipse cx="237" cy="184" stroke="url(#gold)" stroke-width="31" rx="132" ry="94"/>
+    <ellipse cx="237" cy="184" stroke="url(#inner)" stroke-width="8" rx="111" ry="74"/>
+    <path d="M108 153c11-32 48-57 96-63" stroke="#FFF5D9" stroke-linecap="round" stroke-width="5" opacity=".8"/>
+    <path d="M354 213c-11 32-48 57-96 63" stroke="#FFF0CA" stroke-linecap="round" stroke-width="4" opacity=".65"/>
+    <path d="M193 91c-4-7-3-15 3-20l24-22c8-7 20-7 28 0l24 22c6 5 7 13 3 20l-19 31h-44l-19-31Z" fill="url(#gold)" stroke="#FFF0CC" stroke-width="3"/>
+    <path d="m222 66 8-7c3-3 8-3 11 0l8 7-5 13h-17l-5-13Z" fill="#FFF8E5" opacity=".9"/>
+    <path d="m207 90 14-13h29l14 13-21 25h-15l-21-25Z" fill="url(#gem)" stroke="#FFF2DC" stroke-width="3"/>
+    <path d="m221 78 14 37 15-37" stroke="#FFF" stroke-opacity=".65" stroke-width="2"/>
+    <path d="m207 90 14-12m29 0 14 12" stroke="#FFF9E8" stroke-linecap="round" stroke-width="2"/>
+    <circle cx="238" cy="98" r="5" fill="#FFF" opacity=".8"/>
+  </g>
+  <circle cx="386" cy="98" r="4" fill="#E8B4E5"/>
+  <circle cx="89" cy="242" r="3" fill="#E9B8D3"/>
+  <path d="m386 75 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#F2D3E5"/>
+</svg>

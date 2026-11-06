@@ -11,6 +11,7 @@ const alertsRoutes = require("./routes/alerts");
 const { requireAuth } = require("./middleware/auth");
 
 const app = express();
+app.set("trust proxy", 1);
 const port = Number(process.env.PORT) || 3000;
 const webRoot = path.resolve(__dirname, "..");
 
